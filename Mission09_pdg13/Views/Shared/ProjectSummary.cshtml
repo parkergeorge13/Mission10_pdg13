@@ -23,4 +23,16 @@
             <li>Price: $@Model.Price</li>
         </ul>
     </div>
+    <form method="post" asp-page="/Cart">
+
+        <input type="hidden" asp-for="@Model.BookId" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"
+
+        <span class="card-text">
+            <button type="submit" class="btn btn-success btn-sm floar-end">Add to Cart</button>
+        </span>
+
+    </form>
 </div>
+
+
